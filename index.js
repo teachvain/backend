@@ -20,8 +20,8 @@ exports.io = io
 
 //CORS Preflight request handler
 app.use('*', (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "held-oder-tyrann.tk")
-  res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,POST")
+  res.setHeader("Access-Control-Allow-Origin", "held-oder-tyrann.tk teachvain.tk")
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,DELETE,PUT")
   res.send();
 })
 
@@ -43,6 +43,6 @@ app.use("/api", require("./routes/index"))
 //socket.io
 require("./routes/socket/socketio")
 
-server.listen(7869, () => {
+server.listen(6678, () => {
   console.log("API is active and listenig on 7869");
 });
